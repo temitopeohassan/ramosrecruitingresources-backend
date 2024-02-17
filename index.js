@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-  origin: 'https://ramosrecruitingresources.vercel.app/', // Allow requests from this origin
+  origin: 'https://ramosrecruitingresources.vercel.app/*', // Allow requests from this origin
   methods: ['GET', 'POST'], // Allow these HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
 }));
