@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-  origin: 'https://ramosrecruitingresources.vercel.app', // Allow requests from this origin
+  origin: 'http://localhost:3000', // Allow requests from this origin
   methods: ['GET', 'POST'], // Allow these HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
 }));
@@ -62,7 +62,7 @@ app.get('/api/admin', async (req, res) => {
   res.json(admin);
 });
 
-const PORT = 3001;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 });
